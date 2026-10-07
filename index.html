@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DZ.X — JB MARKET</title>
+<meta name="description" content="Marketplace jual beli akun game: Free Fire, Mobile Legends, Roblox.">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#home">DZ<span>.X</span></a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+  <nav id="menu">
+    <a href="#home">Home</a>
+    <a href="#marketplace">Marketplace</a>
+    <a href="#jual">Jual Akun</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <h1>DZ<span>.X</span></h1>
+  <p class="tag">Marketplace Akun Game</p>
+  <p class="sub">Temukan dan jual akun game favoritmu dengan mudah.</p>
+  <div class="cta">
+    <a class="btn" href="#marketplace">Lihat Marketplace</a>
+    <a class="btn ghost" href="#jual">Jual Akun</a>
+  </div>
+  <div class="stats">
+    <div><b id="statAkun">0</b><span>Total akun</span></div>
+    <div><b id="statGame">0</b><span>Total game</span></div>
+    <div><b id="statStatus">...</b><span>Status marketplace</span></div>
+  </div>
+</section>
+
+<section id="marketplace" class="wrap">
+  <h2>Marketplace</h2>
+  <div class="tools">
+    <input id="search" type="search" placeholder="Cari nama akun, game, deskripsi, seller">
+    <select id="sort" aria-label="Urutkan">
+      <option value="new">Terbaru</option>
+      <option value="asc">Termurah</option>
+      <option value="desc">Termahal</option>
+    </select>
+    <input id="maxPrice" type="number" inputmode="numeric" min="0" placeholder="Harga maksimal (Rp)">
+  </div>
+  <div class="chips" id="chips">
+    <button class="chip on" data-g="">Semua</button>
+    <button class="chip" data-g="Free Fire">Free Fire</button>
+    <button class="chip" data-g="Mobile Legends">Mobile Legends</button>
+    <button class="chip" data-g="Roblox">Roblox</button>
+    <button class="chip" data-g="Game Lainnya">Game Lainnya</button>
+  </div>
+  <div id="grid" class="grid"></div>
+  <p id="empty" class="empty" hidden>Belum ada akun yang tersedia.</p>
+</section>
+
+<section id="jual" class="wrap">
+  <h2>Jual Akun</h2>
+  <form id="form" class="form" novalidate>
+    <label>Foto akun
+      <input id="photo" type="file" accept="image/jpeg,image/png,image/webp">
+      <small>JPG, JPEG, PNG, atau WEBP. Maksimal 5 MB.</small>
+    </label>
+    <img id="preview" alt="Pratinjau foto" hidden>
+    <label>Game
+      <select id="game">
+        <option value="">Pilih game</option>
+        <option>Free Fire</option>
+        <option>Mobile Legends</option>
+        <option>Roblox</option>
+        <option>Game Lainnya</option>
+      </select>
+    </label>
+    <label>Nama / judul akun
+      <input id="name" maxlength="80" placeholder="Contoh: FF Sultan 70 Skin">
+    </label>
+    <label>Deskripsi akun
+      <textarea id="desc" rows="4" maxlength="500" placeholder="Jelaskan isi akun..."></textarea>
+    </label>
+    <label>Harga (Rp)
+      <input id="price" type="number" inputmode="numeric" min="1" placeholder="Masukkan harga">
+    </label>
+    <label>Nama seller
+      <input id="seller" maxlength="40" placeholder="Nama kamu">
+    </label>
+    <label>Nomor WhatsApp
+      <input id="wa" type="tel" inputmode="tel" placeholder="628xxxxxxxxxx">
+    </label>
+    <p id="msg" class="msg" role="status"></p>
+    <button id="submit" class="btn" type="submit">Publikasikan Akun</button>
+  </form>
+</section>
+</main>
+
+<footer>© <span id="yr"></span> DZ.X — JB MARKET. Transaksi dilakukan langsung antara pembeli dan seller.</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
