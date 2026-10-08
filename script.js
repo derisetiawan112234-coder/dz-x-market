@@ -1,6 +1,6 @@
 // ====== ISI DI SINI (anon/publishable key saja, JANGAN service_role) ======
-const SUPABASE_URL = "YOUR_SUPABASE_URL";
-const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+const SUPABASE_URL = "https://bkdpcignopyrgsurofpu.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_eGfZQHyV3UklcA19nkMMnA_CuGbH0z4";
 // ==========================================================================
 
 const BUCKET = "listing-images";
